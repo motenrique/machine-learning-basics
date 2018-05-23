@@ -10,10 +10,8 @@ J = 0;
 
 %Complete the calculation of cost function
 
-
-
-h = X * theta;
-squareErrors = (h - y).^2;
+h_theta = X * theta;
+squareErrors = (h_theta - y).^2;
 
 J = (1/(2*m))*( sum(squareErrors) );
 
