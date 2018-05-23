@@ -8,5 +8,3 @@ figure;
 plot(x, y, 'rx', 'MarkerSize', 10);
 ylabel('Energy Output in MW');
 xlabel('Temperature in Celsius');
-
-plotData(X, y);
