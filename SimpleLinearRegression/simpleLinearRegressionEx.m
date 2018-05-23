@@ -25,7 +25,7 @@ theta = zeros(2, 1);
 %Compute and plot initial cost
 J = cost(X, y,theta);
 fprintf('With theta = [0 ; 0]\nCost computed = %f----\n', J);
-fprintf('Expected cost value (approx) ----\n');
+fprintf('Expected cost value (approx) 104264.98----\n');
 
 %% == Part Three: Gradient Descent
 
@@ -34,7 +34,7 @@ iterations = 1500;
 alpha = 0.1;
 
 fprintf('\nRunning Gradient Descent----\n')
-theta = gradientDescent(X, y, alpha, iterations);
+theta = gradientDescent(X, y, theta, alpha, iterations);
 
 % print theta to screen
 fprintf('Theta found by gradient descent:\n');
