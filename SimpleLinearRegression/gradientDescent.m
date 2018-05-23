@@ -1,4 +1,4 @@
-function theta = gradientDescent(X, y, alpha, iterations)
+function theta = gradientDescent(X, y, theta, alpha, iterations)
 %Computes the Gradient Descent for dataset.
 %X and y represent the data, alpha represents the step size for gradient
 %and iterations is the number of times to run the update for theta
