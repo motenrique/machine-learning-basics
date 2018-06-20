@@ -100,3 +100,28 @@ contour(theta_zero_vals, theta_one_vals, J_vals, logspace(-500, 400, 1600))
 xlabel('\theta_zero'); ylabel('\theta_one');
 hold on;
 plot(theta(1), theta(2), 'rx', 'MarkerSize', 10, 'LineWidth', 2);
+
+%Predicting examples
+fprintf('Lets predict some data using our found theta\n');
+fprintf('Load the example file\n');
+EX = load('../testExamples.csv');
+fprintf('Program paused. Press enter to continue\n');
+pause;
+
+%Separate data
+fprintf('Separate the data in the file to get our X and y (y used to compare)\n');
+X_example = EX(:, 1);
+y_example = EX(:, 5);
+
+%Get our matrix of ones and the X examples for predicting operation
+X_example = [ ones( size(X_example) ), X_example ];
+
+%Predict data
+fprintf('Print our predicted data\n');
+P = X_example * theta;
+P
+
+fprintf('Print our example data to compare\n');
+y_example
+fprintf('Program paused. Press enter to continue\n');
+pause;
